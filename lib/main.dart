@@ -7,6 +7,7 @@ import 'package:samplejunee/MyList.dart';
 import 'package:samplejunee/Route/home.dart';
 import 'package:samplejunee/Screen/homepage.dart';
 import 'package:samplejunee/UI_designs/farmersshop.dart';
+import 'package:samplejunee/UI_designs/loginui.dart';
 import 'package:samplejunee/bottomsheet.dart';
 import 'package:samplejunee/bottomsheet1.dart';
 import 'package:samplejunee/citiesimages.dart';
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:Farmers(),
+      home:LoginUi(),
       routes: {
         'settings': (BuildContext ctx) => const SettingsPage(),
         'registration': (BuildContext ctx) => RegistrationPage(),

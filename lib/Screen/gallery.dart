@@ -34,7 +34,7 @@ class _StagereddState extends State<Staggeredd> {
         child: StaggeredGridView.countBuilder(
             mainAxisSpacing: 10,
             crossAxisSpacing: 8,
-            crossAxisCount: 2,
+            crossAxisCount: 3,
             itemCount: listImages.length,
             itemBuilder: (context, index) {
               return Container(
@@ -54,7 +54,9 @@ class _StagereddState extends State<Staggeredd> {
             staggeredTileBuilder: (index) {
               return StaggeredTile.count(1, index.isEven ? 1 : 3);
             }),
+
       ),
+
     );
   }
 }

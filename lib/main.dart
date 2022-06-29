@@ -4,13 +4,19 @@ import 'package:flutter/services.dart';
 import 'package:samplejunee/Bottomnavbar.dart';
 import 'package:samplejunee/ListSeparated.dart';
 import 'package:samplejunee/MyList.dart';
+import 'package:samplejunee/Route/home.dart';
 import 'package:samplejunee/Screen/homepage.dart';
+import 'package:samplejunee/UI_designs/farmersshop.dart';
+import 'package:samplejunee/bottomsheet.dart';
+import 'package:samplejunee/bottomsheet1.dart';
 import 'package:samplejunee/citiesimages.dart';
 import 'package:samplejunee/customappbar.dart';
+import 'package:samplejunee/customtabbar.dart';
 import 'package:samplejunee/expaandable.dart';
 import 'package:samplejunee/expaanddone.dart';
 import 'package:samplejunee/expaandfirst.dart';
 import 'package:samplejunee/expanded.dart';
+import 'package:samplejunee/login.dart';
 import 'package:samplejunee/lotanimat.dart';
 import 'package:samplejunee/onboarding.dart';
 import 'package:samplejunee/registervalidation.dart';
@@ -19,6 +25,9 @@ import 'package:samplejunee/splashscreen.dart';
 import 'package:samplejunee/validationform.dart';
 
 import 'ListViewbuilder.dart';
+import 'Route/registration.dart';
+import 'Route/settings.dart';
+import 'bottomsheet2.dart';
 
 
 void main() {
@@ -41,7 +50,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:CustomApb(),
+      home:Farmers(),
+      routes: {
+        'settings': (BuildContext ctx) => const SettingsPage(),
+        'registration': (BuildContext ctx) => RegistrationPage(),
+      },
+
     );
   }
 }

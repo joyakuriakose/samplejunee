@@ -10,19 +10,22 @@ class LoginPage extends StatelessWidget {
         title: Text("Login Myntras"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.all(20),
+
+            // color: Colors.cyan,
+            padding: EdgeInsets.fromLTRB(55, 5, 55, 5),
             child: const TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.teal)),
-                  hintText: "Enter your email",
-                  labelText: "Username",
-                  helperText: 'Username should contain lowercase letters',
-                  prefixIcon: Icon(Icons.email),
-                  prefixIconColor: Colors.green),
+                border: OutlineInputBorder(),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.redAccent)),
+                hintText: "Enter your email",
+                labelText: "Username",
+                helperText: 'Username should contain lowercase letters',
+                prefixIcon: Icon(Icons.email, color: Colors.redAccent),
+              ),
               keyboardType: TextInputType.text,
               // obscureText: true,
               // obscuringCharacter: '*',
@@ -67,6 +70,12 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(fixedSize: Size(400, 40),
+                primary: Colors.green,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40)
+                ),
+            ),
             onPressed: () {
               Navigator.push(
                 context,

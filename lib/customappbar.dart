@@ -43,7 +43,7 @@ class CustomApbState extends State {
           backgroundColor: Colors.blue,
           // automaticallyImplyLeading: true,
           title: const Text(
-            "Navigation Drawer",
+            "NNavigation Drawer",
             style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
           ),

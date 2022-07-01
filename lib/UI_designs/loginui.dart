@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
 
-class LoginUi extends StatelessWidget{
+class LoginUi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Colors.green,
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage("assetes/images/wallpic.jpg"),
-            fit: BoxFit.cover,
-            opacity: 0.5,
-          ),
-        ),
+
+        child:
+            Positioned.fill(
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset("assetes/images/dalia.webp",
+                    fit: BoxFit.cover),
+              ),
+            ),
+            // Column(crossAxisAlignment: CrossAxisAlignment.center,
+            //   children: [
+            //     Text("nsk")
+            //   ],
+            // ),
+
       ),
+
+
 
     );
   }
-
 }

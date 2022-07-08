@@ -2,6 +2,8 @@ import 'package:accordion/accordion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:samplejunee/Bottomnavbar.dart';
+import 'package:samplejunee/Gridview/customgridview.dart';
+import 'package:samplejunee/Gridview/staggereddview.dart';
 import 'package:samplejunee/ListSeparated.dart';
 import 'package:samplejunee/MyList.dart';
 import 'package:samplejunee/Route/home.dart';
@@ -26,8 +28,11 @@ import 'package:samplejunee/onboarding.dart';
 import 'package:samplejunee/registervalidation.dart';
 import 'package:samplejunee/snackbar.dart';
 import 'package:samplejunee/splashscreen.dart';
+import 'package:samplejunee/stagg.dart';
 import 'package:samplejunee/validationform.dart';
 
+
+import 'Customgriddview.dart';
 import 'ListViewbuilder.dart';
 import 'Route/registration.dart';
 import 'Route/settings.dart';
@@ -54,7 +59,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:LoginUi(),
+      home:ArticleList(),
       routes: {
         'settings': (BuildContext ctx) => const SettingsPage(),
         'registration': (BuildContext ctx) => RegistrationPage(),

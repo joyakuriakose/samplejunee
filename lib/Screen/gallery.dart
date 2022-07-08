@@ -11,6 +11,8 @@ class Staggeredd extends StatefulWidget {
 }
 
 class _StagereddState extends State<Staggeredd> {
+  // List namess = ["apple", 'Orange', 'Grape', 'Banana', 'Tomato', 'Pinaeple'];
+
   List<String> listImages = [
     "https://images.unsplash.com/photo-1533048324814-79b0a31982f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=468&q=80",
     "https://images.unsplash.com/photo-1545310834-cd6a8a0884b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -22,6 +24,7 @@ class _StagereddState extends State<Staggeredd> {
     "https://images.unsplash.com/photo-1549777501-5656651fd109?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     "https://images.unsplash.com/photo-1494137269338-d36b0f687715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,9 +35,10 @@ class _StagereddState extends State<Staggeredd> {
       body: Container(
         margin: EdgeInsets.all(10),
         child: StaggeredGridView.countBuilder(
+
             mainAxisSpacing: 10,
             crossAxisSpacing: 8,
-            crossAxisCount: 3,
+            crossAxisCount: 2,
             itemCount: listImages.length,
             itemBuilder: (context, index) {
               return Container(
@@ -42,21 +46,31 @@ class _StagereddState extends State<Staggeredd> {
                   borderRadius: BorderRadius.all(Radius.circular(12)),
                   color: Colors.transparent,
                 ),
-                child: ClipRRect(
-                  borderRadius: const BorderRadius.all(Radius.circular(12)),
-                  child: FadeInImage.memoryNetwork(
-                      placeholder: kTransparentImage,
-                      image: listImages[index],
-                      fit: BoxFit.cover),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.all(Radius.circular(12)),
+                        child: FadeInImage.memoryNetwork(
+                            placeholder: kTransparentImage,
+                            image: listImages[index],
+                            fit: BoxFit.cover),
+
+                      ),
+
+                    ),
+                  ],
+
                 ),
+
               );
             },
             staggeredTileBuilder: (index) {
               return StaggeredTile.count(1, index.isEven ? 1 : 3);
             }),
-
       ),
-
     );
   }
 }

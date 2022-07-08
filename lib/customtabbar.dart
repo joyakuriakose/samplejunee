@@ -13,7 +13,7 @@ class CustomTabBar extends StatelessWidget {
           children: [
             Container(
               height: 40,
-              margin: EdgeInsets.only(top: 10, left: 0, right: 0),
+              margin: EdgeInsets.only(top: 10, left: 90, right: 0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color:  Colors.grey[300],

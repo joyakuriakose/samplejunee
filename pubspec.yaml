@@ -41,6 +41,7 @@ dependencies:
   controller: ^0.1.4
   expand_widget: ^2.1.0
   font_awesome_flutter: ^10.1.0
+  flutter_rating_bar: ^4.0.1
 
 
 

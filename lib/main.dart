@@ -7,11 +7,19 @@ import 'package:samplejunee/Gridview/staggereddview.dart';
 import 'package:samplejunee/ListSeparated.dart';
 import 'package:samplejunee/MyList.dart';
 import 'package:samplejunee/Route/home.dart';
+import 'package:samplejunee/Screen/gallery.dart';
 import 'package:samplejunee/Screen/homepage.dart';
 import 'package:samplejunee/SignupPage.dart';
 import 'package:samplejunee/UI_designs/articlelist.dart';
+import 'package:samplejunee/UI_designs/dlfhealthy.dart';
 import 'package:samplejunee/UI_designs/farmersshop.dart';
+import 'package:samplejunee/UI_designs/hotel/bookingdetails/bookinghome.dart';
+import 'package:samplejunee/UI_designs/hotel/home_page/components/appbarsliver.dart';
+import 'package:samplejunee/UI_designs/hotel/home_page/components/detailsview.dart';
+import 'package:samplejunee/UI_designs/hotel/home_page/home_screen.dart';
+import 'package:samplejunee/UI_designs/hotel/room_designs/roompage.dart';
 import 'package:samplejunee/UI_designs/loginui.dart';
+import 'package:samplejunee/UI_designs/orderdetails.dart';
 import 'package:samplejunee/bottomsheet.dart';
 import 'package:samplejunee/bottomsheet1.dart';
 import 'package:samplejunee/citiesimages.dart';
@@ -59,7 +67,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:ArticleList(),
+      home:BookingHome(),
       routes: {
         'settings': (BuildContext ctx) => const SettingsPage(),
         'registration': (BuildContext ctx) => RegistrationPage(),

@@ -29,16 +29,16 @@ class _StagereddState extends State<Staggeredd> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Staggered Grid View"),
-        centerTitle: true,
+        title: Center(child: Text("Staggered Grid View")),
+        // centerTitle: true,
       ),
       body: Container(
         margin: EdgeInsets.all(10),
         child: StaggeredGridView.countBuilder(
 
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 8,
-            crossAxisCount: 2,
+            mainAxisSpacing: 20,
+            crossAxisSpacing: 18,
+            crossAxisCount: 3,
             itemCount: listImages.length,
             itemBuilder: (context, index) {
               return Container(
@@ -52,7 +52,7 @@ class _StagereddState extends State<Staggeredd> {
                   children: [
                     Expanded(
                       child: ClipRRect(
-                        borderRadius: const BorderRadius.all(Radius.circular(12)),
+                        borderRadius: const BorderRadius.all(Radius.circular(10)),
                         child: FadeInImage.memoryNetwork(
                             placeholder: kTransparentImage,
                             image: listImages[index],
@@ -65,10 +65,11 @@ class _StagereddState extends State<Staggeredd> {
 
                 ),
 
+
               );
             },
             staggeredTileBuilder: (index) {
-              return StaggeredTile.count(1, index.isEven ? 1 : 3);
+              return StaggeredTile.count(1, index.isEven ? 4 : 2);
             }),
       ),
     );

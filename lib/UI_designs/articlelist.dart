@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 class ArticleList extends StatelessWidget {
-
   List<Map> articles = [
     {
       "title": "How to Seem Like You Always Have Your Shot Together",
@@ -85,7 +83,6 @@ class ArticleList extends StatelessWidget {
         ),
         child: Scaffold(
           backgroundColor: Colors.grey[300],
-
           appBar: AppBar(
             centerTitle: true,
             title: const Text(
@@ -137,7 +134,7 @@ class ArticleList extends StatelessWidget {
                   return _buildArticleItem(index);
                 },
                 separatorBuilder: (context, index) =>
-                const SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
               ),
               const Text("Tab 2"),
               const Text("Tab 3"),
@@ -179,83 +176,80 @@ class ArticleList extends StatelessWidget {
   Widget _buildArticleItem(int index) {
     Map article = articles[index];
     return Container(
-        color: Colors.white,
-        child: Stack(
-          children: <Widget>[
-            Container(
-              width: 90,
-              height: 90,
-              color: bgColor,
-            ),
-            Container(
-              color: Colors.white,
-              padding: const EdgeInsets.all(16.0),
-              margin: const EdgeInsets.all(16.0),
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    height: 100,
-                    color: primaryColor,
-                    width: 80.0,
-                    child: const Image(
-                      image: NetworkImage("https://images.unsplash.com/photo-1505762929116-cada876eea35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
-                      ),fit: BoxFit.cover,
+      color: Colors.white,
+      child: Stack(
+        children: <Widget>[
+          Container(
+            width: 90,
+            height: 90,
+            color: bgColor,
+          ),
+          Container(
+            color: Colors.white,
+            padding: const EdgeInsets.all(16.0),
+            margin: const EdgeInsets.all(16.0),
+            child: Row(
+              children: <Widget>[
+                Container(
+                  height: 100,
+                  color: primaryColor,
+                  width: 80.0,
+                  child: const Image(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1505762929116-cada876eea35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
                     ),
+                    fit: BoxFit.cover,
                   ),
-                  const SizedBox(width: 20.0),
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          article["title"],
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(
-                            color: secondaryColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.0,
-                          ),
+                ),
+                const SizedBox(width: 20.0),
+                Expanded(
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        article["title"],
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          color: secondaryColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.0,
                         ),
-                        Text.rich(
-                          TextSpan(
-                            children: [
-                              WidgetSpan(
-                                child: CircleAvatar(
-                                  radius: 15.0,
-                                  backgroundColor: primaryColor,
-                                ),
+                      ),
+                      Text.rich(
+                        TextSpan(
+                          children: [
+                            WidgetSpan(
+                              child: CircleAvatar(
+                                radius: 15.0,
+                                backgroundColor: primaryColor,
                               ),
-                              const WidgetSpan(
-                                child: SizedBox(width: 5.0),
-                              ),
-                              TextSpan(
-                                  text: article["author"],
-                                  style: const TextStyle(fontSize: 16.0)),
-                              const WidgetSpan(
-                                child: SizedBox(width: 20.0),
-                              ),
-                              const WidgetSpan(
-                                child: SizedBox(width: 5.0),
-                              ),
-                              TextSpan(
-                                text: article["time"],
-                              ),
-                            ],
-                          ),
-                          style: const TextStyle(height: 2.0),
+                            ),
+                            const WidgetSpan(
+                              child: SizedBox(width: 5.0),
+                            ),
+                            TextSpan(
+                                text: article["author"],
+                                style: const TextStyle(fontSize: 16.0)),
+                            const WidgetSpan(
+                              child: SizedBox(width: 20.0),
+                            ),
+                            const WidgetSpan(
+                              child: SizedBox(width: 5.0),
+                            ),
+                            TextSpan(
+                              text: article["time"],
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
-          ],
-        ),
+                        style: const TextStyle(height: 2.0),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
-
-
 }
-
-
-

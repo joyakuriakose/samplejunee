@@ -20,7 +20,7 @@ class SplashScreenn extends StatelessWidget{
         "Loading",
         style: TextStyle(color: Colors.teal),
       ),
-      photoSize: 20,
+     // photoSize: 20,
       gradientBackground: const LinearGradient(
           begin: Alignment.bottomCenter,
           end: Alignment.topRight,

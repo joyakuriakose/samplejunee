@@ -42,6 +42,8 @@ dependencies:
   expand_widget: ^2.1.0
   font_awesome_flutter: ^10.1.0
   flutter_rating_bar: ^4.0.1
+  flutter_svg: ^1.1.1
+  intl: ^0.17.0
 
 
 
@@ -74,6 +76,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assetes/images/
+    - assetes/svgimages/
 
   #   - images/a_dot_ham.jpeg
 

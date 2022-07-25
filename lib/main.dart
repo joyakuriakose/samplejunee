@@ -20,6 +20,7 @@ import 'package:samplejunee/UI_designs/hotel/home_page/home_screen.dart';
 import 'package:samplejunee/UI_designs/hotel/room_designs/roompage.dart';
 import 'package:samplejunee/UI_designs/loginui.dart';
 import 'package:samplejunee/UI_designs/orderdetails.dart';
+import 'package:samplejunee/UI_designs/profile_ui/profilemainpage.dart';
 import 'package:samplejunee/bottomsheet.dart';
 import 'package:samplejunee/bottomsheet1.dart';
 import 'package:samplejunee/citiesimages.dart';
@@ -67,7 +68,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:BookingHome(),
+      home:ProfileMainPage(),
       routes: {
         'settings': (BuildContext ctx) => const SettingsPage(),
         'registration': (BuildContext ctx) => RegistrationPage(),

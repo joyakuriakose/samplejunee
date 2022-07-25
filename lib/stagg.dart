@@ -5,9 +5,17 @@ import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 import 'package:transparent_image/transparent_image.dart';
 
+void main() {
+  runApp(MaterialApp(
+    // debugShowCheckedModeBanner: false,
+    // theme: ThemeData(primarySwatch: Colors.purple),
+    home: NewStaggeredView(),
+  ));
+}
+
 class NewStaggeredView extends StatelessWidget {
   NewStaggeredView({Key? key}) : super(key: key);
-  final List<String> images = [
+  final List<String> image = [
     'https://images.unsplash.com/photo-1653656091256-3caf051d9565?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     'https://images.unsplash.com/photo-1655411439249-6a72181b4bb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80',
     'https://images.unsplash.com/photo-1655317175238-b59bf8eb0469?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
@@ -26,14 +34,22 @@ class NewStaggeredView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.all(10),
+        color: Colors.yellow,
+        margin: EdgeInsets.all(60),
         child: StaggeredGridView.countBuilder(
             mainAxisSpacing: 5,
             crossAxisSpacing: 5,
             crossAxisCount: 3,
-            itemCount: images.length,
+            itemCount: image.length,
             itemBuilder: (BuildContext context, int index) {
-              return Card();
+               return Card(
+
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                color: Colors.purple,borderOnForeground: true,
+
+              );
             },
             staggeredTileBuilder: (index) {
               return StaggeredTile.count(1, index.isEven ? 1.3 : 1.8);
@@ -42,3 +58,14 @@ class NewStaggeredView extends StatelessWidget {
     );
   }
 }
+
+// class MyClip extends CustomClipper<Rect> {
+// Rect getClip(Size size) {
+// return Rect.fromLTWH(10, 0, 0, 0);
+// }
+//
+// bool shouldReclip(oldClipper) {
+// return false;
+// }
+// }
+//

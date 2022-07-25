@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MaterialApp(
+    home: SignUpPage(),
+  ));
+}
+
 class SignUpPage extends StatefulWidget {
   @override
   _SignUpPage createState() => _SignUpPage();
@@ -24,6 +30,7 @@ class _SignUpPage extends State<SignUpPage> {
                   child: Container(
                     height: 500,
                     width: 400,
+                    // color: Colors.yellow,
                     child: Card(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40)),
@@ -51,6 +58,7 @@ class _SignUpPage extends State<SignUpPage> {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(35, 5, 35, 5),
                             child: TextFormField(
+
                               decoration: InputDecoration(
                                 icon: Icon(Icons.email),
                                 labelText: "E-mail",
@@ -109,9 +117,9 @@ class _SignUpPage extends State<SignUpPage> {
                                 TextSpan(
                                   text: '  Login',
                                   style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.red[700],
-                                  fontWeight: FontWeight.bold),
+                                      fontSize: 16,
+                                      color: Colors.red[700],
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ]),
                             ),

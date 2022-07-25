@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:random_date/random_date.dart';
 
+void main() {
+  runApp(MaterialApp(home: ImportExtendedGrid()));
+}
+
 class ImportExtendedGrid extends StatelessWidget {
 
 
@@ -91,7 +95,7 @@ class ImportExtendedGrid extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 8, right: 8, top: 10),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(20),
                           child:
                           Image.network(images[index], fit: BoxFit.cover),
                         ),

@@ -6,7 +6,7 @@ class HotelAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      expandedHeight: 200,
+      expandedHeight: 220,
       leading: Icon(Icons.menu),
       elevation: 0,
       actions: [

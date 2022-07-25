@@ -4,6 +4,12 @@ import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 import 'package:transparent_image/transparent_image.dart';
 
+void main(){
+  runApp(MaterialApp(
+    home: StaggereddGriddView(),
+  ));
+}
+
 class StaggereddGriddView extends StatelessWidget {
   List namess = ["apple", 'Orange', 'Grape', 'Banana', 'Tomato', 'Pinaeple'];
 
@@ -18,19 +24,23 @@ class StaggereddGriddView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQuery.of(context).size.height;
-    MediaQuery.of(context).size.width;
+    // MediaQuery.of(context).size.height;
+    // MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        // centerTitle: true,
         backgroundColor: Colors.greenAccent[100],
-        title: RichText(
-          text: TextSpan(
-            text: 'XYZreader',
-            style: GoogleFonts.amaranth(
-                fontSize: 35, fontWeight: FontWeight.bold, color: Colors.white),
-          ),
-        ),
+        // title: Container(
+        //   child: RichText(
+        //       text: const TextSpan(children: [
+        //         TextSpan(
+        //             text: 'Forgot',
+        //             style: TextStyle(color: Colors.black)),
+        //         TextSpan(
+        //             text: ' Password?',
+        //             style: const TextStyle(color: Colors.red))
+        //       ])),
+        // ),
       ),
       body: Container(
         child: StaggeredGridView.countBuilder(

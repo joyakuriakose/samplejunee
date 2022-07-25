@@ -3,6 +3,10 @@ import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 import 'package:transparent_image/transparent_image.dart';
 
+void main() {
+  runApp(MaterialApp(home: Staggeredd()));
+}
+
 class Staggeredd extends StatefulWidget {
   const Staggeredd({Key? key}) : super(key: key);
 
@@ -52,7 +56,8 @@ class _StagereddState extends State<Staggeredd> {
                   children: [
                     Expanded(
                       child: ClipRRect(
-                        borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        borderRadius: const BorderRadius.all(
+                            Radius.circular(10)),
                         child: FadeInImage.memoryNetwork(
                             placeholder: kTransparentImage,
                             image: listImages[index],

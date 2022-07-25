@@ -14,7 +14,7 @@ class SearchView extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 20, top: 20),
                   child: Text(
-                    'Hello @rjun',
+                    'Hello @JoyaKuriakose',
                     style: TextStyle(
                         fontSize: 16.0,
                         color: Colors.grey,
@@ -59,21 +59,47 @@ class SearchView extends StatelessWidget {
           padding: const EdgeInsets.only(top: 120),
           child: Center(
             child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(15)),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(2, 7),
+                        color: Colors.grey[100]!,
+                        blurRadius: 3)
+                  ]),
               height: 60,
               width: 450,
               // width: MediaQuery.of(context).size.width * 0.50,
               child: TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(width: 3, color: Colors.grey),
-                    borderRadius: BorderRadius.circular(15),
+                  isDense: true,
+                  prefixIcon: Icon(
+                    Icons.search,
+                    size: 25,
+                    color: Colors.grey[400],
                   ),
-                  hintText: 'Search For Hotel',
-                  hintStyle: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16.0,
-                    color: Colors.grey.withOpacity(0.8),
+                  filled: true,
+                  enabled: true,
+                  hintText: 'Search for hotel ',
+                  hintStyle: const TextStyle(color: Colors.grey),
+                  fillColor: Colors.white,
+                  disabledBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ),
+                  ),
+                  enabledBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ),
+                  ),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ),
                   ),
                 ),
               ),

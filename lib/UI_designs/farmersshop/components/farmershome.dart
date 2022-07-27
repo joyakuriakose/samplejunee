@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:samplejunee/UI_designs/farmersshop/components/iconsfileview.dart';
 import 'package:samplejunee/UI_designs/farmersshop/components/itemsview.dart';
+import 'package:samplejunee/UI_designs/farmersshop/components/tabbararea.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -10,39 +12,6 @@ void main() {
 }
 
 class Farmers extends StatefulWidget {
-  // final List<Map<String, String>> gridMap = [
-  //   {
-  //     'title': 'Vegitables',
-  //     'images':
-  //         'https://images.pexels.com/photos/2291070/pexels-photo-2291070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  //   },
-  //   {
-  //     'title': 'Fruits',
-  //     'images':
-  //         'https://images.pexels.com/photos/3085062/pexels-photo-3085062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  //   },
-  //   {
-  //     'title': 'Exotic',
-  //     'images':
-  //         'https://images.pexels.com/photos/7494449/pexels-photo-7494449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  //   },
-  //   {
-  //     'title': 'Fresh Cuts',
-  //     'images':
-  //         'https://images.pexels.com/photos/7817325/pexels-photo-7817325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  //   },
-  //   {
-  //     'title': 'Nutrition Chargers',
-  //     'images':
-  //         'https://images.pexels.com/photos/7474082/pexels-photo-7474082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  //   },
-  //   {
-  //     'title': 'Packed Minerals',
-  //     'images':
-  //         'https://images.pexels.com/photos/8679553/pexels-photo-8679553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  //   },
-  // ];
-
   @override
   _FarmersState createState() => _FarmersState();
 }
@@ -57,6 +26,7 @@ class _FarmersState extends State<Farmers> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            backgroundColor: Colors.green,
             // expandedHeight: 0,
             floating: false,
             pinned: true,
@@ -91,7 +61,9 @@ class _FarmersState extends State<Farmers> {
               ),
             ],
             bottom: AppBar(
+              backgroundColor: Colors.green,
               title: Container(
+
                 width: double.infinity,
                 height: 40,
                 color: Colors.white,
@@ -107,71 +79,8 @@ class _FarmersState extends State<Farmers> {
           // SizedBox(height: 15),
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.only(top: 10, bottom: 10),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: DefaultTabController(
-                      length: 4,
-                      child: TabBar(
-                        labelColor: Colors.green[800],
-                        labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                        isScrollable: true,
-                        tabs: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.greenAccent[100],
-                              onPrimary: Colors.green[700],
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40),
-                                side: BorderSide(color: Colors.greenAccent),
-                              ),
-                            ),
-                            child: Tab(text: "VEGETABLES"),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.greenAccent[100],
-                              onPrimary: Colors.green[700],
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40),
-                                side: BorderSide(color: Colors.greenAccent),
-                              ),
-                            ),
-                            child: Tab(text: "FRUITS"),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.greenAccent[100],
-                              onPrimary: Colors.green[700],
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40),
-                                side: BorderSide(color: Colors.greenAccent),
-                              ),
-                            ),
-                            child: Tab(text: "EXOTIC"),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.greenAccent[100],
-                              onPrimary: Colors.green[700],
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40),
-                                side: BorderSide(color: Colors.greenAccent),
-                              ),
-                            ),
-                            child: Tab(text: "FRESH CUTS"),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: TabBarArea(),
             ),
           ),
           SliverToBoxAdapter(
@@ -232,56 +141,9 @@ class _FarmersState extends State<Farmers> {
           ),
           // SizedBox(height: 5),
           SliverToBoxAdapter(
-            child: Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-                  child: Container(
-                    width: 500,
-                    height: 70,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.grey,
-                      ),
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(
-                              child: Column(
-                            children: [
-                              Icon(Icons.lock_clock, size: 35),
-                              SizedBox(height: 5),
-                              Text("30 MINS POLICY"),
-                            ],
-                          )),
-                          Container(
-                              child: Column(
-                            children: [
-                              Icon(Icons.mobile_friendly_sharp, size: 35),
-                              SizedBox(height: 5),
-                              Text("TRACAEBILITY"),
-                            ],
-                          )),
-                          Container(
-                              child: Column(
-                            children: [
-                              Icon(Icons.person, size: 35),
-                              SizedBox(height: 5),
-                              Text("LOCAL SOURCING"),
-                            ],
-                          )),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            child: IconsFileView(),
           ),
+
           // SizedBox(height: 5),
           SliverToBoxAdapter(
             child: Container(

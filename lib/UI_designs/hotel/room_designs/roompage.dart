@@ -4,11 +4,14 @@ import 'components/imageview.dart';
 import 'components/buttondescrip.dart';
 import 'components/ratingview.dart';
 
+void main(){
+  runApp(MaterialApp(
+    home: RoomPage(),
+  ));
+}
+
 class RoomPage extends StatefulWidget {
   const RoomPage({Key? key}) : super(key: key);
-
-
-
 
   @override
   _RoomPageState createState() => _RoomPageState();

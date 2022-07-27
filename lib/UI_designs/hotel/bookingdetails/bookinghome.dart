@@ -9,9 +9,6 @@ void main(){
     home: BookingHome(),
   ));
 }
-
-
-
 class BookingHome extends StatelessWidget{
   static final images = ['room1', 'room2', 'room3', 'room4'];
   static final prices = ['180', '200', '450', '500'];

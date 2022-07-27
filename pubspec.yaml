@@ -44,6 +44,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   flutter_svg: ^1.1.1
   intl: ^0.17.0
+  shared_preferences: ^2.0.15
 
 
 
@@ -77,6 +78,7 @@ flutter:
   assets:
     - assetes/images/
     - assetes/svgimages/
+    - assetes/pngimages/
 
   #   - images/a_dot_ham.jpeg
 

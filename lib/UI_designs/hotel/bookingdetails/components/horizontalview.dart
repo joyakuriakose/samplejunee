@@ -22,14 +22,14 @@ final List<Hotel> hotels = [
     imageUrl: 'assetes/images/room2.jpg',
     title: 'Hotel Merriot',
     description: 'A five star Hotelin Kochi',
-    price: 180,
+    price: 200,
     rating: 4.5,
   ),
   Hotel(
     imageUrl: 'assetes/images/room3.jpg',
     title: 'HolyDayIn',
     description: 'A five Star hotel in Kochi',
-    price: 180,
+    price: 450,
     rating: 4.5,
   ),
   Hotel(

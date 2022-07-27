@@ -9,12 +9,9 @@ import 'package:flutter/material.dart';
 class ProfileListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        children: [
-          Container(
-            margin: const EdgeInsets.only(left: 35, right: 35),
-            height: MediaQuery.of(context).size.height * 0.3,
+    return Container(
+            margin: const EdgeInsets.only(left: 50, right: 50),
+            height: MediaQuery.of(context).size.height * 0.4,
             width: MediaQuery.of(context).size.width * 0.2,
             child: Expanded(
               child: Center(
@@ -68,9 +65,9 @@ class ProfileListView extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-        ],
-      ),
+
+
+
     );
   }
 }

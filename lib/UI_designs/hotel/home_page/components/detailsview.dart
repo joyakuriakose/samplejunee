@@ -34,9 +34,10 @@ class DetailsView extends StatelessWidget {
                 Container(
                   height: 190,
                   decoration: BoxDecoration(
+
                     image: DecorationImage(
                       fit: BoxFit.fitWidth,
-                      image: NetworkImage(image),
+                      image: AssetImage('assetes/images/$image.jpg'),
                     ),
                   ),
                 ),

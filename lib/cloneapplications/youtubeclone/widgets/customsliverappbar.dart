@@ -1,36 +1,41 @@
 import 'package:flutter/material.dart';
 
-class CustomSliverAppBar extends StatelessWidget{
+import '../constants.dart';
+
+
+class CustomSliverAppBar extends StatelessWidget {
+  const CustomSliverAppBar({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
       floating: true,
-      leadingWidth: 100.0,
+      leadingWidth: 100,
       leading: Padding(
-        padding: const EdgeInsets.only(left: 12.0),
+        padding: const EdgeInsets.only(left: 12),
         child: Image.asset('assetes/images/ytlogo.png'),
       ),
       actions: [
         IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.cast),
+          onPressed: () => {},
+          icon: const Icon(Icons.cast),
         ),
         IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.notifications_outlined),
+          onPressed: () => {},
+          icon: const Icon(Icons.notifications_outlined),
         ),
         IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.search),
+          onPressed: () => {},
+          icon: const Icon(Icons.search),
         ),
         IconButton(
-            onPressed: () {},
-            iconSize: 40.0,
-            icon: CircleAvatar(
-              foregroundImage: NetworkImage(""),
-            ))
+          iconSize: 40,
+          onPressed: () => {},
+          icon: CircleAvatar(
+            foregroundImage: NetworkImage(currentUser.profileImageUrl),
+          ),
+        ),
       ],
     );
   }
-
 }

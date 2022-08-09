@@ -5,7 +5,7 @@ const Color primaryColorLight = Color(0xFFED1B2E);
 const Color drawerColorPrimary = Color(0xFF88070B);
 const Color drawerColorSecondary = Color(0xFFCF0A11);
 
-final String path = 'assetes/pngimages/img.png';
+final String path = 'assetes/pngimages/sintel.png';
 
 final List<Draw> drawerItems = [
   Draw(title: 'Quick Payment', icon: Icons.photo_camera),

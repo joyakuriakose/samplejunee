@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:samplejunee/Screen/homepage.dart';
 import 'package:samplejunee/UI_designs/bankui/components/cardsreabank.dart';
 import 'package:samplejunee/UI_designs/bankui/components/containerboxes.dart';
 import 'package:samplejunee/UI_designs/bankui/components/lasttransactions.dart';
